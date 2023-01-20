@@ -1,0 +1,14 @@
+Ignore case distinctions in patterns and input data,
+so that characters that differ only in case match each other.
+Although this is straightforward when letters differ in case only via
+lowercase-uppercase pairs, the behavior is unspecified in other situations.
+For example, uppercase “” has an unusual lowercase
+counterpart “ſ” (Unicode character U+017F, LATIN SMALL LETTER LONG )
+in many locales, and it is unspecified whether this unusual character
+matches “” or “” even though uppercasing it yields “”.
+Another example: the lowercase German letter “”
+(U+00DF, LATIN SMALL LETTER SHARP ) is normally capitalized Ig
+as the two-character string “” but it does not match “”,
+and it might not match the uppercase letter “”
+(U+1E9E, LATIN CAPITAL LETTER SHARP ) even though lowercasing
+the latter yields the former.
